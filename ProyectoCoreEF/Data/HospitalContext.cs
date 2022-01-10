@@ -17,5 +17,6 @@ namespace ProyectoCoreEF.Data
         //DICHAS CLASES SON COLECCIONES DE TIPO DbSet
         //TANTAS TABLAS COMO TENGAMOS, TANTAS CLASES CON DbSet
         public DbSet<Hospital> Hospitales { get; set; }
+        public DbSet<Doctor> Doctores { get; set; }
     }
 }

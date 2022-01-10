@@ -1,0 +1,15 @@
+﻿@model List<Doctor>
+
+<ul class="list-group">
+    @foreach (Doctor doc in Model)
+    {
+        <li class="list-group-item">
+            @doc.Apellido | 
+            <a asp-controller="Doctores"
+               asp-action="Details"
+               asp-route-iddoctor="@doc.IdDoctor">
+                Detalles
+            </a>
+        </li>
+    }
+</ul>

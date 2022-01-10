@@ -29,6 +29,7 @@ namespace ProyectoCoreEF
             string cadena = this.Configuration.GetConnectionString("cadenahospital");
             //RESOLVEMOS LA DEPENDENCIA DEL REPOSITORY
             services.AddTransient<RepositoryHospital>();
+            services.AddTransient<RepositoryDoctores>();
             //RESOLVEMOS LA DEPENDENCIA DEL CONTEXT, QUE NECESITA
             //LA CADENA DE CONEXION
             services.AddDbContext<HospitalContext>

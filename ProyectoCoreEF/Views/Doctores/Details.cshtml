@@ -1,0 +1,19 @@
+﻿@model Doctor
+
+<a asp-controller="Doctores"
+   asp-action="DoctoresHospital"
+   asp-route-idhospital="@Model.IdHospital">
+    Volver a doctores
+</a>
+<hr/>
+<ul class="list-group">
+    <li class="list-group-item">
+        Apellido: @Model.Apellido
+    </li>
+    <li class="list-group-item">
+        Especialidad: @Model.Especialidad
+    </li>
+    <li class="list-group-item">
+        Salario: @Model.Salario
+    </li>
+</ul>
