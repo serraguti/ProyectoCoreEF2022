@@ -34,5 +34,28 @@ namespace ProyectoCoreEF.Repositories
             //O NOS DEVUELVE UN NULL (Default)
             return consulta.FirstOrDefault();
         }
+
+        public List<Doctor> GetDoctores()
+        {
+            var consulta = from datos in this.context.Doctores
+                           select datos;
+            return consulta.ToList();
+        }
+
+        public List<Doctor> GetDoctoresSalario(int salario)
+        {
+            var consulta = from datos in this.context.Doctores
+                           where datos.Salario >= salario
+                           select datos;
+            //COMPROBAMOS SI EXISTEN O NO DOCTORES
+            if (consulta.Count() == 0)
+            {
+                return null;
+            }
+            else
+            {
+                return consulta.ToList();
+            }
+        }
     }
 }
