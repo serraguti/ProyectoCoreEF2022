@@ -11,7 +11,8 @@ namespace ProyectoCoreEF.Data
     {
         //NECESITAMOS UN CONSTRUCTOR OBLIGATORIO PARA 
         //PODER RECIBIR LA CADENA DE CONEXION POSTERIORMENTE
-        public HospitalContext(DbContextOptions options) : base(options) { }
+        public HospitalContext
+            (DbContextOptions<HospitalContext> options) : base(options) { }
 
         //DEBEMOS MAPEAR CADA CLASE QUE TENGAMOS CON LA BBDD
         //DICHAS CLASES SON COLECCIONES DE TIPO DbSet
